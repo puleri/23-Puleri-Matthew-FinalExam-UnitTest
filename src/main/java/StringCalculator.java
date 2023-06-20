@@ -8,8 +8,7 @@ public class StringCalculator {
             for (String number : numbersArray) {
                 if (!number.trim().isEmpty()) {
                     if (Integer.parseInt(number.trim()) >= 1000) {
-                        // Add nothing
-                        returnValue += 0;
+                        // do nothing
                     } else {
                         returnValue += Integer.parseInt(number.trim());
                         // If it is not a number, parseInt will throw an exception

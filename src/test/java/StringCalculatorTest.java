@@ -1,4 +1,5 @@
 import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -24,5 +25,9 @@ public class StringCalculatorTest {
         StringCalculator.add("1, 1000");
         equals(1);
     }
-
+    
+    @Test
+    public void testNegativeNotAllowed(){
+        Assertions.assertThrows(IllegalArgumentException.class, () -> StringCalculator.add("1, -20"));
+    }
 }
